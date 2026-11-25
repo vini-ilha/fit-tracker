@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="FitTrack: conteúdos, treinos e hábitos para uma vida mais saudável.">
+  <title>FitTrack | Seu progresso começa hoje</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Navegação principal">
+      <a class="brand" href="#inicio" aria-label="FitTrack, página inicial">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span>fit<span>track</span></span>
+      </a>
+
+      <button class="menu-toggle icon-button" id="menuToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+
+      <div class="nav-links" id="navLinks">
+        <a href="#inicio" class="nav-link active">Início</a>
+        <a href="#treinos" class="nav-link">Treinos</a>
+        <a href="#nutricao" class="nav-link">Nutrição</a>
+        <a href="#bem-estar" class="nav-link">Bem-estar</a>
+        <a href="#sobre" class="nav-link">Sobre</a>
+        <a href="#contato" class="nav-link">Contato</a>
+      </div>
+
+      <div class="nav-actions">
+        <button class="icon-button" id="themeToggle" aria-label="Ativar modo escuro" title="Alternar tema">
+          <svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.2 15.4A8.5 8.5 0 0 1 8.6 3.8 8.5 8.5 0 1 0 20.2 15.4Z"/></svg>
+        </button>
+        <button class="btn btn-outline btn-small" id="loginOpen">Entrar</button>
+        <button class="btn btn-primary btn-small" id="accessOpen">Acessibilidade</button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="conteudo">
+    <section class="hero section" id="inicio">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow"><span class="eyebrow-dot"></span> SUA JORNADA, NO SEU RITMO</span>
+          <h1>Pequenos passos.<br><span>Grandes conquistas.</span></h1>
+          <p class="hero-text">Encontre inspiração para se movimentar, alimentar-se melhor e construir hábitos que fazem bem — um dia de cada vez.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#treinos">Explorar conteúdos <span aria-hidden="true">→</span></a>
+            <a class="text-link" href="#sobre">Conheça o FitTrack</a>
+          </div>
+          <div class="hero-proof">
+            <div class="avatar-stack" aria-hidden="true"><span>J</span><span>M</span><span>A</span></div>
+            <p><strong>Seu bem-estar em primeiro lugar</strong><br><small>Informação simples para escolhas melhores.</small></p>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1100&q=85" alt="Academia iluminada com equipamentos de treinamento">
+          <div class="floating-card floating-top">
+            <span class="floating-icon">↗</span>
+            <div><strong>Seu ritmo</strong><small>Seu próprio progresso</small></div>
+          </div>
+          <div class="floating-card floating-bottom">
+            <span class="pulse-icon">♥</span>
+            <div><strong>Bem-estar</strong><small>Corpo e mente em equilíbrio</small></div>
+          </div>
+          <div class="hero-shape" aria-hidden="true"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats-strip" aria-label="Destaques do FitTrack">
+      <div class="container stats-grid">
+        <div><strong>01</strong><span>Comece de onde está</span></div>
+        <div><strong>02</strong><span>Aprenda no seu ritmo</span></div>
+        <div><strong>03</strong><span>Construa constância</span></div>
+        <div><strong>04</strong><span>Celebre cada avanço</span></div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="treinos">
+      <div class="container">
+        <div class="section-heading">
+          <div><span class="eyebrow">MOVIMENTO É VIDA</span><h2>Encontre seu <span>próximo treino</span></h2><p>Explore ideias de atividades e escolha a que combina com seu momento.</p></div>
+          <a href="#contato" class="text-link">Tire suas dúvidas <span aria-hidden="true">→</span></a>
+        </div>
+
+        <div class="search-row">
+          <label class="search-box" for="contentSearch">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg>
+            <input type="search" id="contentSearch" placeholder="Pesquisar atividades..." autocomplete="off">
+          </label>
+          <div class="filter-tabs" role="tablist" aria-label="Filtrar atividades">
+            <button class="filter-tab selected" role="tab" aria-selected="true" data-filter="todos">Todos</button>
+            <button class="filter-tab" role="tab" aria-selected="false" data-filter="forca">Força</button>
+            <button class="filter-tab" role="tab" aria-selected="false" data-filter="cardio">Cardio</button>
+            <button class="filter-tab" role="tab" aria-selected="false" data-filter="mobilidade">Mobilidade</button>
+          </div>
+        </div>
+
+        <div class="cards-grid" id="workoutGrid">
+          <article class="content-card" data-category="forca" data-search="treino de força musculação resistência">
+            <div class="card-image"><img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=700&q=80" alt="Pessoa treinando com halteres"><span class="card-tag">FORÇA</span></div>
+            <div class="card-body"><div class="card-meta"><span>INICIANTE</span><span>•</span><span>30–40 MIN</span></div><h3>Treino de força</h3><p>Conheça movimentos básicos para desenvolver força com técnica e segurança.</p><a href="#contato" class="card-link">Ver conteúdo <span aria-hidden="true">→</span></a></div>
+          </article>
+          <article class="content-card" data-category="cardio" data-search="caminhada corrida cardio resistência">
+            <div class="card-image"><img src="https://images.unsplash.com/photo-1552674605-db6ffd4facb5?auto=format&fit=crop&w=700&q=80" alt="Pessoa correndo ao ar livre"><span class="card-tag">CARDIO</span></div>
+            <div class="card-body"><div class="card-meta"><span>INICIANTE</span><span>•</span><span>20–30 MIN</span></div><h3>Movimente-se ao ar livre</h3><p>Caminhada e corrida leve podem ser formas acessíveis de começar a se movimentar.</p><a href="#contato" class="card-link">Ver conteúdo <span aria-hidden="true">→</span></a></div>
+          </article>
+          <article class="content-card" data-category="mobilidade" data-search="alongamento mobilidade flexibilidade recuperação">
+            <div class="card-image"><img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=700&q=80" alt="Pessoa praticando alongamento"><span class="card-tag">MOBILIDADE</span></div>
+            <div class="card-body"><div class="card-meta"><span>TODOS OS NÍVEIS</span><span>•</span><span>10–15 MIN</span></div><h3>Alongamento consciente</h3><p>Reserve alguns minutos para trabalhar mobilidade e percepção corporal.</p><a href="#contato" class="card-link">Ver conteúdo <span aria-hidden="true">→</span></a></div>
+          </article>
+        </div>
+        <p class="empty-state" id="emptyState" hidden>Nenhum conteúdo encontrado. Tente outra palavra ou categoria.</p>
+      </div>
+    </section>
+
+    <section class="section" id="nutricao">
+      <div class="container nutrition-grid">
+        <div class="nutrition-image">
+          <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=1000&q=85" alt="Refeição equilibrada com vegetais, grãos e alimentos variados">
+          <div class="image-note"><span>✦</span><p><strong>Equilíbrio acima da perfeição</strong><br><small>Hábitos sustentáveis começam com escolhas possíveis.</small></p></div>
+        </div>
+        <div class="nutrition-copy">
+          <span class="eyebrow">ALIMENTAÇÃO SEM COMPLICAÇÃO</span>
+          <h2>Nutrição que acompanha <span>sua rotina.</span></h2>
+          <p>Uma alimentação equilibrada não precisa ser complicada. Informação confiável ajuda você a fazer escolhas conscientes, respeitando suas necessidades e sua realidade.</p>
+          <div class="nutrition-points">
+            <div><span class="check">✓</span><p><strong>Variedade no prato</strong><small>Conheça diferentes grupos alimentares.</small></p></div>
+            <div><span class="check">✓</span><p><strong>Hidratação ao longo do dia</strong><small>Lembre-se de manter água por perto.</small></p></div>
+            <div><span class="check">✓</span><p><strong>Consistência possível</strong><small>Pequenas mudanças podem fazer diferença.</small></p></div>
+          </div>
+          <a href="#contato" class="btn btn-primary">Quero saber mais <span aria-hidden="true">→</span></a>
+          <p class="disclaimer">Conteúdo educativo. Orientações individuais devem ser feitas por profissionais habilitados.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="bem-estar">
+      <div class="container">
+        <div class="section-heading">
+          <div><span class="eyebrow">CUIDAR TAMBÉM É DESCANSAR</span><h2>Bem-estar além do <span>exercício</span></h2><p>Uma rotina saudável também envolve sono, recuperação e atenção à saúde mental.</p></div>
+        </div>
+        <div class="cards-grid wellness-grid">
+          <article class="content-card wellness-card">
+            <div class="card-image"><img src="https://images.unsplash.com/photo-1511295742362-92c96b5d5b3b?auto=format&fit=crop&w=700&q=80" alt="Quarto tranquilo preparado para uma noite de descanso"><span class="card-tag">SONO</span></div>
+            <div class="card-body"><h3>Priorize o descanso</h3><p>Manter horários regulares e criar um ambiente confortável pode ajudar a melhorar a qualidade do sono.</p></div>
+          </article>
+          <article class="content-card wellness-card">
+            <div class="card-image"><img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=700&q=80" alt="Pessoa em momento de tranquilidade ao ar livre"><span class="card-tag">SAÚDE MENTAL</span></div>
+            <div class="card-body"><h3>Respeite seu ritmo</h3><p>Momentos de pausa, lazer e convivência também fazem parte do cuidado com a saúde.</p></div>
+          </article>
+          <article class="content-card wellness-card">
+            <div class="card-image"><img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=700&q=80" alt="Pessoa realizando exercício de alongamento"><span class="card-tag">RECUPERAÇÃO</span></div>
+            <div class="card-body"><h3>Inclua dias leves</h3><p>Alternar atividades intensas com descanso e movimentos leves ajuda a construir uma rotina mais equilibrada.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="destaques">
+      <div class="container">
+        <div class="section-heading">
+          <div><span class="eyebrow">INSPIRAÇÃO PARA VOCÊ</span><h2>Um pouco de motivação <span>para hoje</span></h2><p>Deslize pelos lembretes e encontre uma ideia para colocar em prática.</p></div>
+          <div class="carousel-controls"><button class="icon-button" id="prevSlide" aria-label="Dica anterior">←</button><button class="icon-button" id="nextSlide" aria-label="Próxima dica">→</button></div>
+        </div>
+        <div class="quote-carousel image-carousel" aria-live="polite">
+          <article class="quote-slide active"><img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1400&q=85" alt="Espaço de academia com equipamentos de exercício"><div class="carousel-caption"><p>Movimente-se de uma forma que faça sentido para você.</p><small>ATIVIDADE FÍSICA</small></div></article>
+          <article class="quote-slide"><img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=1400&q=85" alt="Mesa com alimentos variados e nutritivos"><div class="carousel-caption"><p>Variedade e equilíbrio são bons pontos de partida.</p><small>ALIMENTAÇÃO</small></div></article>
+          <article class="quote-slide"><img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=1400&q=85" alt="Pessoa aproveitando um momento de tranquilidade"><div class="carousel-caption"><p>Descansar também é uma forma de cuidar de si.</p><small>RECUPERAÇÃO E BEM-ESTAR</small></div></article>
+        </div>
+        <div class="carousel-dots" id="carouselDots" aria-label="Selecionar dica"><button class="dot active" aria-label="Dica 1" aria-current="true"></button><button class="dot" aria-label="Dica 2"></button><button class="dot" aria-label="Dica 3"></button></div>
+      </div>
+    </section>
+
+    <section class="section" id="sobre">
+      <div class="container about-grid">
+        <div><span class="eyebrow">SOBRE O FITTRACK</span><h2>Saúde é uma jornada, <span>não uma linha de chegada.</span></h2></div>
+        <div class="about-copy"><p>O FitTrack é um projeto demonstrativo criado para reunir conteúdos introdutórios sobre movimento, alimentação e bem-estar em uma experiência simples e acolhedora.</p><p>Nosso propósito é incentivar hábitos saudáveis sem promessas milagrosas, cobranças ou comparações. Cada pessoa tem seu próprio ritmo.</p><div class="about-values"><span>♡ Acolhimento</span><span>✦ Informação</span><span>↗ Constância</span></div></div>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contato">
+      <div class="container contact-grid">
+        <div><span class="eyebrow">VAMOS CONVERSAR?</span><h2>Tem alguma dúvida ou <span>sugestão?</span></h2><p>Envie uma mensagem. Este formulário é demonstrativo e exibirá uma confirmação na própria página.</p><div class="contact-detail"><span class="contact-symbol">✉</span><div><strong>Fale com a equipe</strong><small>Preencha o formulário ao lado.</small></div></div></div>
+        <form class="contact-form" id="contactForm" novalidate>
+          <div class="form-row"><label for="name">Nome</label><input id="name" name="name" type="text" placeholder="Como podemos chamar você?" required minlength="2"><small class="field-error" id="nameError"></small></div>
+          <div class="form-row"><label for="email">E-mail</label><input id="email" name="email" type="email" placeholder="voce@exemplo.com" required><small class="field-error" id="emailError"></small></div>
+          <div class="form-row"><label for="subject">Assunto</label><select id="subject" name="subject" required><option value="">Selecione um assunto</option><option>Dúvida sobre conteúdos</option><option>Sugestão</option><option>Outro assunto</option></select></div>
+          <div class="form-row"><label for="message">Mensagem</label><textarea id="message" name="message" rows="4" placeholder="Escreva sua mensagem..." required minlength="10"></textarea><small class="field-error" id="messageError"></small></div>
+          <button class="btn btn-primary btn-full" type="submit">Enviar mensagem <span aria-hidden="true">→</span></button>
+          <p class="form-feedback" id="formFeedback" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-top">
+      <a class="brand brand-footer" href="#inicio"><span class="brand-mark">F</span><span>fit<span>track</span></span></a>
+      <p>Seu bem-estar começa com um passo.</p>
+      <div class="footer-links"><a href="#treinos">Treinos</a><a href="#nutricao">Nutrição</a><a href="#bem-estar">Bem-estar</a><a href="#contato">Contato</a><button id="footerAccess">Acessibilidade</button></div>
+    </div>
+    <div class="container footer-bottom"><span>© <span id="currentYear"></span> FitTrack. Projeto acadêmico demonstrativo.</span><a href="#inicio">Voltar ao topo ↑</a></div>
+  </footer>
+
+  <!-- Painel de acessibilidade -->
+  <div class="panel-backdrop" id="accessBackdrop" hidden></div>
+  <aside class="side-panel" id="accessPanel" aria-labelledby="accessTitle" aria-hidden="true">
+    <div class="panel-heading"><div><span class="eyebrow">PREFERÊNCIAS</span><h2 id="accessTitle">Acessibilidade</h2></div><button class="icon-button" id="accessClose" aria-label="Fechar painel">×</button></div>
+    <p class="panel-intro">Personalize a visualização para deixar a leitura mais confortável.</p>
+    <div class="setting-group"><h3>Tamanho do texto</h3><div class="setting-buttons"><button class="btn btn-outline" id="fontDecrease" aria-label="Diminuir fonte">A−</button><button class="btn btn-outline" id="fontReset">Padrão</button><button class="btn btn-outline" id="fontIncrease" aria-label="Aumentar fonte">A+</button></div></div>
+    <div class="setting-group setting-row"><div><h3>Alto contraste</h3><small>Reforça a diferença entre texto e fundo.</small></div><label class="switch"><input type="checkbox" id="contrastToggle"><span class="switch-slider"></span></label></div>
+    <div class="setting-group setting-row"><div><h3>Reduzir animações</h3><small>Reduz movimentos e transições.</small></div><label class="switch"><input type="checkbox" id="motionToggle"><span class="switch-slider"></span></label></div>
+    <div class="setting-group"><h3>Tema da página</h3><button class="btn btn-outline btn-full" id="panelThemeToggle">Alternar claro / escuro</button></div>
+    <button class="btn btn-primary btn-full" id="accessReset">Restaurar preferências</button>
+  </aside>
+
+  <!-- Modal de login demonstrativo -->
+  <div class="modal-backdrop" id="loginModal" hidden>
+    <section class="login-modal" role="dialog" aria-modal="true" aria-labelledby="loginTitle">
+      <button class="icon-button modal-close" id="loginClose" aria-label="Fechar janela">×</button>
+      <span class="brand-mark">F</span><span class="eyebrow">BEM-VINDO DE VOLTA</span>
+      <h2 id="loginTitle">Entre no FitTrack</h2><p>Esta é uma demonstração visual de login, sem autenticação real.</p>
+      <form id="loginForm">
+        <div class="form-row"><label for="loginEmail">E-mail</label><input type="email" id="loginEmail" required placeholder="voce@exemplo.com"></div>
+        <div class="form-row"><label for="loginPassword">Senha</label><input type="password" id="loginPassword" required minlength="4" placeholder="Digite qualquer senha"></div>
+        <button class="btn btn-primary btn-full" type="submit">Entrar</button>
+        <p id="loginFeedback" class="form-feedback" role="status"></p>
+      </form>
+    </section>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
